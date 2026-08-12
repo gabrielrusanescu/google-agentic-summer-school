@@ -1,0 +1,41 @@
+review_id,title,recommended,sentiment,issues,is_sarcastic,summary
+r004,Neon Drift Racers,True,positive,crashes_or_bugs,False,"The player updated their review to positive after patch 1.4 resolved previous crashing issues, and they are enjoying the new drift ghosts feature."
+r005,Glacier Punk,True,mixed,crashes_or_bugs,False,"The reviewer praises the game's unique ambition and beauty, but notes that it is broken."
+r006,Glacier Punk,False,negative,crashes_or_bugs,False,"The reviewer experienced severe animation glitches with NPCs and a game-breaking quest bug that prevents progression, advising others to wait for patches."
+r009,Neon Drift Racers,True,mixed,crashes_or_bugs,False,"The reviewer loves the arcade racer for its handling and recommends it, but notes that recent update 1.3 causes crashes to desktop during championships."
+r011,Glacier Punk,False,negative,crashes_or_bugs,False,The reviewer experienced a broken save file and advises waiting a year for the game to be fixed.
+r030,Glacier Punk,True,positive,,False,"The reviewer praises the survival mechanics and atmosphere, noting that frequent updates will make the game a classic in the future."
+r037,Neon Drift Racers,True,mixed,crashes_or_bugs,False,"The game crashes frequently since the update, but the exceptional handling keeps the player hooked."
+r040,Pixel Pirates Online,False,negative,monetization|other,False,"The reviewer is quitting the game due to predatory monetization, a fear-of-missing-out pass, and login queues."
+r044,Pixel Pirates Online,True,positive,,False,"Enjoyable cooperative pirate gameplay at launch with minimal monetization, recommended to play now."
+r046,Pixel Pirates Online,False,negative,monetization,False,"The reviewer is heavily criticizing the Admiral's Vault update for introducing pay-to-win randomized cannon crates with stat boosts, turning the game into a pay-to-win casino."
+r047,Glacier Punk,False,negative,crashes_or_bugs,False,"The reviewer experienced game-breaking script failures on three consecutive quests, forcing them to lose progress by reloading and rolling back saves, though they praised the game's writing."
+r048,Glacier Punk,False,negative,content_amount|monetization|crashes_or_bugs,False,"The reviewer feels the game is an overpriced, incomplete paid beta with placeholder systems."
+r050,Glacier Punk,False,mixed,crashes_or_bugs|performance,False,"The game has great potential and brilliant core concepts, but is heavily hampered by severe performance drops, save/quest corruption bugs, and softlocks."
+r053,Glacier Punk,True,mixed,crashes_or_bugs,False,"The reviewer enjoys the game's unique homesteading premise despite frequent bugs and patches breaking their base, considering it an ambitious and improving title."
+r061,Glacier Punk,True,positive,crashes_or_bugs,False,The player praises the game's stunning visuals and immersive atmosphere despite acknowledging some bugs.
+r063,Neon Drift Racers,False,negative,crashes_or_bugs,False,The game hangs on the loading screen and fails to load after the latest update.
+r072,Moth Light,True,positive,difficulty|controls_or_ui,False,"An overwhelmingly positive review praising the game's art, music, bosses, and story, with minor complaints about map design, fast travel timing, and a difficulty spike."
+r073,Glacier Punk,False,positive,crashes_or_bugs,True,The reviewer praises the immersive experience while sarcastically highlighting glitchy physics and bugs such as clipping through the map and T-posing models.
+r075,Moth Light,True,positive,,False,"A very brief, highly positive review describing the game as haunting."
+r079,Pixel Pirates Online,False,negative,multiplayer_or_netcode|performance,False,The player spent more time waiting in the login queue than playing the tutorial.
+r084,Moth Light,True,positive,,False,The reviewer was deeply moved and emotionally impacted by the Mother Pyralis boss fight and its accompanying music.
+r088,Pixel Pirates Online,False,negative,monetization,False,"A long-time player with 1100 hours is quitting because the game's monetization has progressively worsened over the years, introducing XP boosts, expiring battle passes, and gacha cannons with stats, overshadowing the core gameplay."
+r090,Neon Drift Racers,True,positive,,False,The game runs smoothly on version 1.4 and features an amazing soundtrack.
+r093,Pixel Pirates Online,False,negative,monetization|controls_or_ui,True,The reviewer criticizes the game's UI and monetization focus by pointing out that the cash shop button is larger than the map button.
+r100,Pixel Pirates Online,True,mixed,monetization|multiplayer_or_netcode,False,"The reviewer praises the cooperative gameplay and exciting combat moments, but criticizes the creeping pay-for-power monetization and long event queues."
+r102,Pixel Pirates Online,False,negative,monetization,True,A sarcastic review criticizing the game's heavy emphasis on microtransactions.
+r111,Moth Light,True,positive,,False,An emotionally moving and complex game that requires taking notes.
+r128,Moth Light,True,positive,,False,The reviewer was deeply moved and emotional about the game's atmosphere and music.
+r140,Neon Drift Racers,True,positive,difficulty,False,"The game features great racing, visuals, and drifting, but suffers from frustrating rubber-band AI."
+r144,Moth Light,True,positive,controls_or_ui,False,"An emotionally powerful game with stunning hand-drawn art and a great soundtrack, praised as an absolute triumph despite minor map frustrations."
+r147,Moth Light,True,mixed,controls_or_ui,False,"The reviewer experienced navigation issues due to a poor in-game map, but overall recommends the game because the rest of the experience is nearly perfect."
+r148,Pixel Pirates Online,True,mixed,monetization,False,"New player enjoying casual ship battles with friends for free, though noting monetization issues in PvP as mentioned by veterans."
+r158,Pixel Pirates Online,False,negative,monetization,False,"The reviewer complains that the game is pay-to-win, allowing players who spend money to easily defeat more skilled players."
+r163,Neon Drift Racers,False,negative,difficulty|other,False,"The reviewer complains about overly aggressive rubber-banding and unrealistic AI behavior where opponents catch up too quickly, rendering clean driving pointless."
+r182,Neon Drift Racers,True,positive,,False,The reviewer praises the game's excellent drift handling mechanics and soundtrack in an arcade racing style.
+r196,Neon Drift Racers,True,positive,,False,"The reviewer praises the game for its excellent performance, beautiful visuals, engaging gameplay mechanics, and great value."
+r201,Neon Drift Racers,False,negative,crashes_or_bugs,False,"The game's driving mechanics are great, but a recent update causes consistent freezes during races on Midnight Interchange, ruining tournament runs."
+r202,Moth Light,True,positive,controls_or_ui,False,"The map is confusing at first and causes players to get lost, but the game becomes very special once you learn the layout."
+r211,Moth Light,True,positive,controls_or_ui,False,"The reviewer praises the game's stunning graphics and emotional music, highly recommending it despite getting lost due to a poor map."
+r221,Moth Light,False,mixed,controls_or_ui|performance,False,"The game is visually stunning, but suffers from frustrating navigation, lack of a useful map, and tedious backtracking due to delayed fast travel."

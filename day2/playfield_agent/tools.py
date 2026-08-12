@@ -1,30 +1,23 @@
-"""Playfield analyst tools — Day 2 scaffold.
-
-Parts 2-3 of the walkthrough happen in this file. The plumbing (data loading,
-embedding calls, caching) is provided; the tools marked TODO are yours — you
-already wrote their logic in the Day-1 notebooks, today you package it so an
-agent can call it.
-
-Remember: for a tool, the DOCSTRING IS THE USER INTERFACE. The model never sees
-your code — it sees the function name, the parameter names/types, and this
-docstring, and decides from those alone when (and how) to call it.
-"""
+"""Playfield analyst tools — Day 2 SOLUTION."""
 
 import functools
 import time
+from enum import Enum
 from pathlib import Path
+from typing import Literal
 
 import numpy as np
 import pandas as pd
 from google import genai
 from google.genai import types
+from pydantic import BaseModel
 
 GEN_MODEL = "gemini-3.5-flash-lite"
 EMBED_MODEL = "gemini-embedding-001"
 
 
 # --------------------------------------------------------------------------
-# Plumbing (read it, don't rewrite it)
+# Plumbing
 # --------------------------------------------------------------------------
 
 def repo_root() -> Path:
@@ -53,7 +46,6 @@ def _reviews() -> pd.DataFrame:
 
 
 def _embed(texts: list[str] | str, task_type: str) -> np.ndarray:
-    """Embed text(s) → normalized vectors. Retries on rate limits (Day 1, Part 3)."""
     if isinstance(texts, str):
         texts = [texts]
     for attempt in range(7):
@@ -72,8 +64,6 @@ def _embed(texts: list[str] | str, task_type: str) -> np.ndarray:
 
 @functools.lru_cache(maxsize=1)
 def _review_vectors() -> np.ndarray:
-    """The corpus embeddings from Day 1 — loaded from your notebook's cache,
-    or recomputed (once) if the cache is missing."""
     cache_file = repo_root() / "day1" / "cache" / "review_embeddings.npy"
     if cache_file.exists():
         return np.load(cache_file)
@@ -85,7 +75,7 @@ def _review_vectors() -> np.ndarray:
 
 
 # --------------------------------------------------------------------------
-# Part 2 — catalog tools
+# Catalog tools
 # --------------------------------------------------------------------------
 
 def list_games() -> dict:
@@ -133,7 +123,7 @@ def get_game_details(game_id: str) -> dict:
 
 
 # --------------------------------------------------------------------------
-# Part 3 — your Day-1 power tools (TODO: port them from the notebooks)
+# Day-1 power tools
 # --------------------------------------------------------------------------
 
 def search_reviews(query: str, top_k: int = 5) -> dict:
@@ -151,13 +141,24 @@ def search_reviews(query: str, top_k: int = 5) -> dict:
         dict: status, and a list of hits with review_id, title (game),
         recommended, score (0-1 relevance), and review_text.
     """
-    # TODO(you): this is Day 1, Part 3 — the 15-line search engine.
-    #   1. q = _embed(query, task_type="RETRIEVAL_QUERY")[0]
-    #   2. scores = _review_vectors() @ q
-    #   3. top = np.argsort(scores)[::-1][:top_k]
-    #   4. build the hits list from _reviews().iloc[top]  (columns above)
-    #   5. return {"status": "success", "hits": [...]}
-    raise NotImplementedError("Part 3, step 3.1 — port your Day-1 search here")
+    q = _embed(query, task_type="RETRIEVAL_QUERY")[0]
+    scores = _review_vectors() @ q
+    top = np.argsort(scores)[::-1][:top_k]
+
+    df = _reviews()
+    hits = []
+    for i in top:
+        row = df.iloc[int(i)]
+        hits.append(
+            {
+                "review_id": row["review_id"],
+                "title": row["title"],
+                "recommended": bool(row["recommended"]),
+                "score": round(float(scores[int(i)]), 3),
+                "review_text": row["review_text"],
+            }
+        )
+    return {"status": "success", "hits": hits}
 
 
 def analyze_review(review_id: str) -> dict:
@@ -173,24 +174,40 @@ def analyze_review(review_id: str) -> dict:
         dict: status, sentiment (positive/negative/mixed), issues (list of
         category strings), is_sarcastic (bool), and a one-line summary.
     """
-    # TODO(you): this is Day 1, Part 4 — structured extraction.
-    #   1. look up the review text by review_id in _reviews()
-    #      (return a status="error" dict if the id doesn't exist!)
-    #   2. call _client().models.generate_content with
-    #      response_mime_type="application/json" and
-    #      response_schema=ReviewAnalysis (defined below)
-    #   3. r = response.parsed
-    #   4. return {"status": "success", "review_id": review_id,
-    #              "sentiment": r.sentiment, "issues": [i.value for i in r.issues],
-    #              "is_sarcastic": r.is_sarcastic, "summary": r.summary}
-    raise NotImplementedError("Part 3, step 3.2 — port your Day-1 extraction here")
+    df = _reviews()
+    rows = df[df["review_id"] == review_id]
+    if rows.empty:
+        return {
+            "status": "error",
+            "message": f"Unknown review_id {review_id!r}. Use search_reviews to find valid ids.",
+        }
 
+    for attempt in range(7):
+        try:
+            response = _client().models.generate_content(
+                model=GEN_MODEL,
+                contents=f"Analyze this game review:\n\n{rows.iloc[0]['review_text']}",
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=ReviewAnalysis,
+                    temperature=0.0,
+                ),
+            )
+            break
+        except genai.errors.APIError:
+            time.sleep(2**attempt)
+    else:
+        return {"status": "error", "message": "analysis failed after 7 attempts (rate limits?)"}
 
-# The schema from Day 1, Part 4 — ready to use in analyze_review.
-from enum import Enum
-from typing import Literal
-
-from pydantic import BaseModel
+    r = response.parsed
+    return {
+        "status": "success",
+        "review_id": review_id,
+        "sentiment": r.sentiment,
+        "issues": [i.value for i in r.issues],
+        "is_sarcastic": r.is_sarcastic,
+        "summary": r.summary,
+    }
 
 
 class Issue(str, Enum):

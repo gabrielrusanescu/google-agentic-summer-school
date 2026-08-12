@@ -1,8 +1,4 @@
-"""Day 2 · Your first agent — scaffold.
-
-You edit this file in every part of the walkthrough. Restart `adk web` is NOT
-needed after edits — it reloads agents on refresh.
-"""
+"""Day 2 · Your first agent — SOLUTION (end-of-day state)."""
 
 from dotenv import load_dotenv
 from google.adk.agents import LlmAgent
@@ -17,10 +13,28 @@ root_agent = LlmAgent(
     model=MODEL,
     name="playfield_analyst",
     description="Data analyst for the Playfield game storefront.",
-    # Part 1: run it exactly like this — no tools, minimal instruction.
-    # Part 4: you will rewrite this instruction properly (step 4.1).
-    instruction="You are a helpful assistant for the Playfield game storefront.",
-    # Part 2 (step 2.1): add tools.list_games and tools.get_game_details.
-    # Part 3 (step 3.3): add tools.search_reviews and tools.analyze_review.
-    tools=[],
+    instruction="""You are the data analyst for Playfield, an indie game storefront
+with 20 games and 300 player reviews.
+
+You answer questions from Playfield staff and game studios using your tools —
+NEVER from memory. The catalog is fictional; anything you "remember" about these
+games is wrong by construction.
+
+How to work:
+- For catalog facts (price, developer, year, ratings): get_game_details
+  (use list_games first if you only have a title).
+- For what players say, feel, or complain about: search_reviews with a specific,
+  concrete query. Rephrase and search again if the first results look off-topic.
+- For a close reading of one review (sentiment, issues, sarcasm): analyze_review.
+- Cite review ids (e.g. r042) when you quote or summarize specific reviews.
+- If your tools return nothing relevant, say so plainly — never invent reviews
+  or facts. If a tool returns status "error", tell the user what went wrong.
+
+Style: concise and concrete. Lead with the answer, then the evidence.""",
+    tools=[
+        tools.list_games,
+        tools.get_game_details,
+        tools.search_reviews,
+        tools.analyze_review,
+    ],
 )

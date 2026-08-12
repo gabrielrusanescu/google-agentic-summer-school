@@ -7,7 +7,7 @@ from . import tools
 
 load_dotenv(tools.repo_root() / ".env", override=True)
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.5-flash-lite"
 
 root_agent = LlmAgent(
     model=MODEL,
