@@ -21,6 +21,10 @@ from dotenv import load_dotenv
 from google.adk.agents import LlmAgent
 from google.adk.tools import AgentTool
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from playfield_report import tools
 
 load_dotenv(tools.repo_root() / ".env", override=True)
@@ -39,6 +43,18 @@ review_specialist = LlmAgent(
     tools=[tools.search_reviews],
 )
 
+docs_specialist = LlmAgent(
+    name="docs_specialist",
+    model=MODEL,
+    description=(
+        "Answers questions about Playfield's documentation, backed by doc search. "
+        "Give it one clear question."
+    ),
+    instruction="""Research the question you are given using search_docs
+(2-3 different queries), then answer in a short paragraph citing doc ids.""",
+    tools=[tools.search_docs],
+)
+
 root_agent = LlmAgent(
     name="playfield_concierge",
     model=MODEL,
@@ -53,6 +69,7 @@ root_agent = LlmAgent(
     tools=[
         tools.list_games,
         tools.get_game_details,
+        AgentTool(agent=docs_specialist),
         AgentTool(agent=review_specialist),
     ],
 )

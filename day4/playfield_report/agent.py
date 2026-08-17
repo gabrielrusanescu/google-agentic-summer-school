@@ -62,6 +62,28 @@ Facts only. No recommendations, no report — that is another agent's job.""",
 # Done when: Events shows both researchers' tool calls interleaving, and each
 # writes its own state key. Stuck > 10 min? That's what we're here for — ask.
 
+docs_researcher = LlmAgent(
+    name="docs_researcher",
+    model=MODEL,
+    description="Researches player sentiment in the official docs corpus.",
+    instruction="""You are a research specialist for Playfield. The user message
+contains a research question about one or more Playfield games.
+
+Call search_docs 2 to 4 times with DIFFERENT, specific queries that cover the
+question from several angles (e.g. technical problems, value for money, praise,
+comparisons). If you need a game's catalog stats, call get_game_details.
+
+Then output your findings as concise bullet points:
+- one bullet per distinct theme you found,
+- each bullet ends with the supporting doc ids, e.g. (d042, d187),
+- note whether the reviewers recommend the game or not.
+
+Facts only. No recommendations, no report — that is another agent's job.""",
+    tools=[tools.search_docs, tools.get_game_details, tools.list_games],
+    output_key="docs_findings",
+)
+
+
 
 writer = LlmAgent(
     name="report_writer",
@@ -73,6 +95,8 @@ writer = LlmAgent(
     instruction="""Answer the user's research question using ONLY these findings:
 
 {reviews_findings}
+
+{docs_findings}
 
 Write 2-3 paragraphs. Keep the review ids as citations.""",
     output_key="report_draft",

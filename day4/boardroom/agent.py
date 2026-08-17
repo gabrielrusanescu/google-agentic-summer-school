@@ -26,6 +26,10 @@ from google.adk.agents import LlmAgent
 from google.adk.tools import AgentTool
 from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from playfield_report import tools
 from playfield_report.agent import root_agent as report_pipeline
 
