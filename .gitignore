@@ -15,4 +15,11 @@ __pycache__/
 
 # instructor-only material (runbooks, teaching scripts, ground truth, release plan)
 # — remove this line after the course if you want to open-source the kit
+<<<<<<< HEAD
 #instructor/
+=======
+instructor/
+
+# adk web local session databases
+.adk/
+>>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e

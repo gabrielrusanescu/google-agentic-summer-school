@@ -48,6 +48,7 @@ def refund_guardrail(
     #              role="model",
     #              parts=[types.Part(text=POLICY_ANSWER)]))
     #   3. otherwise return None (allow the model call)
+<<<<<<< HEAD
     # raise NotImplementedError("Part 4, step 4.2")
     if "temp:citations" not in callback_context.state:
         callback_context.state["temp:citations"] = "No citations"
@@ -84,6 +85,12 @@ def record_docs(
 
 
 REFUND_WORDS = ["refund", "money back", "chargeback", "rambursare", "banii inapoi", "return my money", "return my payment", "return my purchase"]
+=======
+    raise NotImplementedError("Part 4, step 4.2")
+
+
+REFUND_WORDS = ["refund", "money back", "chargeback", "rambursare"]
+>>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 POLICY_ANSWER = (
     "I can't help with refunds or payments — that's handled by a human on the "

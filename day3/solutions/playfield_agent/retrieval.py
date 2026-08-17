@@ -1,17 +1,4 @@
-"""Day 3, Part 3 — RAG over the Playfield docs corpus.
-
-data/docs/ holds 40 markdown files: a store page and dated patch notes for each
-game. Reviews tell you what players FEEL; these docs are the closest thing to
-ground truth about what the games ARE and what the developers actually shipped.
-
-Index design (deliberately simple): one embedding per FILE. Our docs are small,
-so file-level retrieval works. Real corpora need chunking — splitting long
-documents into overlapping pieces — same pipeline, one extra step.
-
-Build (or rebuild) the index explicitly with:
-
-    python -m playfield_agent.retrieval
-"""
+"""Day 3 RAG over the Playfield docs corpus — SOLUTION."""
 
 import functools
 import json
@@ -60,11 +47,6 @@ def search_docs(query: str, top_k: int = 3) -> dict:
     each patch fixed and when. Use it for any question about fixes, updates,
     versions, or "did the developers…". (Player opinions live in
     search_reviews, not here.)
-<<<<<<< HEAD
-    Compare the complaint dates against the patch date and cite
-    both a review id and a doc file.
-=======
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
     Args:
         query: What to look for, e.g. "save corruption fix" or
@@ -75,32 +57,20 @@ def search_docs(query: str, top_k: int = 3) -> dict:
         dict: status, and a list of hits with file (e.g. 'g12-patch-notes.md'),
         score (0-1 relevance), and the document text.
     """
-    # TODO(you): Part 3, step 3.2 — same shape as search_reviews:
-    #   1. vectors, meta = _index()
-    #   2. q = _embed(query, task_type="RETRIEVAL_QUERY")[0]
-    #   3. scores = vectors @ q ; top = np.argsort(scores)[::-1][:top_k]
-    #   4. hits = [{"file": meta[i]["file"], "score": round(float(scores[i]), 3),
-    #               "text": meta[i]["text"]} for i in top]
-    #   5. return {"status": "success", "hits": hits}
-<<<<<<< HEAD
-    # raise NotImplementedError("Part 3, step 3.2")
     vectors, meta = _index()
     q = _embed(query, task_type="RETRIEVAL_QUERY")[0]
     scores = vectors @ q
     top = np.argsort(scores)[::-1][:top_k]
+
     hits = [
         {
-            "file": meta[i]["file"],
-            "score": round(float(scores[i]), 3),
-            "text": meta[i]["text"],
+            "file": meta[int(i)]["file"],
+            "score": round(float(scores[int(i)]), 3),
+            "text": meta[int(i)]["text"],
         }
         for i in top
     ]
     return {"status": "success", "hits": hits}
-
-=======
-    raise NotImplementedError("Part 3, step 3.2")
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 
 if __name__ == "__main__":
