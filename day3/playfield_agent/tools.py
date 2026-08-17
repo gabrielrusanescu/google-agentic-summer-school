@@ -1,10 +1,6 @@
 """Playfield analyst tools — Day 3 scaffold.
 
-<<<<<<< HEAD
 Everything you finished yesterday is here already (search_reviews,
-=======
-Everything you finished last session is here already (search_reviews,
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 analyze_review, catalog tools). Today's additions, in walkthrough order:
 
 - Part 1: track_game / list_tracked_games  → session STATE (the agent's memory)
@@ -113,7 +109,6 @@ def track_game(game_id: str, tool_context: ToolContext) -> dict:
     #      (assignment is what records the change — mutating a nested list
     #       without reassigning it may not be persisted)
     #   4. return {"status": "success", "tracked_games": watchlist}
-<<<<<<< HEAD
     # raise NotImplementedError("Part 1, step 1.2")
     if _games()[_games()["game_id"] == game_id].empty:
         return {
@@ -125,9 +120,6 @@ def track_game(game_id: str, tool_context: ToolContext) -> dict:
         watchlist.append(game_id)
     tool_context.state["user:tracked_games"] = watchlist
     return {"status": "success", "tracked_games": watchlist}
-=======
-    raise NotImplementedError("Part 1, step 1.2")
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 
 def list_tracked_games(tool_context: ToolContext) -> dict:
@@ -141,7 +133,6 @@ def list_tracked_games(tool_context: ToolContext) -> dict:
     """
     # TODO(you): Part 1, step 1.2 — read "user:tracked_games" from state,
     # map ids to titles via _games(), return them.
-<<<<<<< HEAD
     # raise NotImplementedError("Part 1, step 1.2")
     watchlist = list(tool_context.state.get("user:tracked_games", []))
     games = _games()
@@ -152,9 +143,6 @@ def list_tracked_games(tool_context: ToolContext) -> dict:
             for game_id in watchlist
         ]
     }
-=======
-    raise NotImplementedError("Part 1, step 1.2")
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 
 # --------------------------------------------------------------------------
@@ -175,16 +163,12 @@ def get_sales_data(game_id: str) -> dict:
     #   {"status": "error",
     #    "message": "The sales database is offline. Review statistics from "
     #               "get_game_details are still available."}
-<<<<<<< HEAD
     # raise RuntimeError("connection to sales database timed out after 30s")
     return {
         "status": "error",
         "message": "The sales database is offline. Review statistics from "
                    "get_game_details are still available."
     }
-=======
-    raise RuntimeError("connection to sales database timed out after 30s")
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 
 # --------------------------------------------------------------------------

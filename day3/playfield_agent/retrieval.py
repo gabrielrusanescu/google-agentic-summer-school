@@ -60,11 +60,8 @@ def search_docs(query: str, top_k: int = 3) -> dict:
     each patch fixed and when. Use it for any question about fixes, updates,
     versions, or "did the developers…". (Player opinions live in
     search_reviews, not here.)
-<<<<<<< HEAD
     Compare the complaint dates against the patch date and cite
     both a review id and a doc file.
-=======
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
     Args:
         query: What to look for, e.g. "save corruption fix" or
@@ -82,7 +79,6 @@ def search_docs(query: str, top_k: int = 3) -> dict:
     #   4. hits = [{"file": meta[i]["file"], "score": round(float(scores[i]), 3),
     #               "text": meta[i]["text"]} for i in top]
     #   5. return {"status": "success", "hits": hits}
-<<<<<<< HEAD
     # raise NotImplementedError("Part 3, step 3.2")
     vectors, meta = _index()
     q = _embed(query, task_type="RETRIEVAL_QUERY")[0]
@@ -98,9 +94,6 @@ def search_docs(query: str, top_k: int = 3) -> dict:
     ]
     return {"status": "success", "hits": hits}
 
-=======
-    raise NotImplementedError("Part 3, step 3.2")
->>>>>>> d1ea12a6a15ec2657950d3d950137aefcd9cfe8e
 
 
 if __name__ == "__main__":
