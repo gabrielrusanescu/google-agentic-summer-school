@@ -31,7 +31,7 @@ from playfield_report.agent import root_agent as report_pipeline
 
 load_dotenv(tools.repo_root() / ".env", override=True)
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.5-flash-lite"
 
 # Your byline in the boardroom. Set it in the repo .env — reviewers find your
 # report by this name, and the Pulitzer is awarded to it.

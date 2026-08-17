@@ -19,7 +19,7 @@ from google import genai
 from google.genai import types
 from google.adk.tools import ToolContext
 
-GEN_MODEL = "gemini-2.5-flash"
+GEN_MODEL = "gemini-3.5-flash-lite"
 EMBED_MODEL = "gemini-embedding-001"
 
 CACHE_DIR = Path(__file__).resolve().parent.parent / "cache"
