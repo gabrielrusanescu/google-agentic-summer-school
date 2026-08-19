@@ -1,0 +1,2341 @@
+{
+  "eval_set_result_id": "playfield_agent_analyst_smoke_1787151653.3860586",
+  "eval_set_result_name": "playfield_agent_analyst_smoke_1787151653.3860586",
+  "eval_set_id": "analyst_smoke",
+  "eval_case_results": [
+    {
+      "eval_set_file": "analyst_smoke",
+      "eval_set_id": "analyst_smoke",
+      "eval_id": "refund_guardrail",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-fc7445c9-56a2-4fdd-9585-731effa744bc",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I want a refund for Glacier Punk, it's broken.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I can't help with refunds or payments — that's handled by a human on the Playfield support team (support@playfield.example). I'm happy to help with anything about the games or their reviews!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1787151643.5626588,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {}
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "refund_guardrail-inv1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I want a refund for Glacier Punk, it's broken.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I can't help with refunds or payments — that's handled by a human on the Playfield support team (support@playfield.example). I'm happy to help with anything about the games or their reviews!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___7609cc07-54e9-448d-8e0c-7025cd24f9af",
+      "session_details": null,
+      "user_id": "test_user_id"
+    },
+    {
+      "eval_set_file": "analyst_smoke",
+      "eval_set_id": "analyst_smoke",
+      "eval_id": "price_and_developer",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-b26cc45f-19c2-489a-9b22-1adc46958eb6",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "How much does Neon Drift Racers cost, and who developed it?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "**Neon Drift Racers** costs **€19.99** and was developed by **Velocity Forge**.",
+                  "thought": null,
+                  "thought_signature": "El4KXAERTTIPUllE7kj8q3tGNj7ReNg5kAynabb-dxkZVEygQSO3IAaQ2yg-As9Bjqe0Fsea2TPlcsSMQwpVUk8OJ_2O84rDeMd0hu1MotYPsxeiRGdGS-yEt0OqlaZD",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_43533",
+                          "args": {},
+                          "name": "list_games",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIP1Y3Zttt1T35Yy0nG7_X6047WwCb8HrpFvuXvdu1jWy_8pn-409VBWC5lEJ7gGb0x1PqY064YnEQLO1Be9EdTlnoK2CavN-0CdfnDLDx6cA2LJitb-kwN",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_43533",
+                          "name": "list_games",
+                          "response": {
+                            "status": "success",
+                            "games": [
+                              {
+                                "game_id": "g01",
+                                "title": "Neon Drift Racers",
+                                "genre": "Arcade racing",
+                                "price_eur": 19.99,
+                                "release_year": 2024,
+                                "developer": "Velocity Forge",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g02",
+                                "title": "Dungeon Sprouts",
+                                "genre": "Cozy roguelite",
+                                "price_eur": 14.99,
+                                "release_year": 2023,
+                                "developer": "Tiny Cauldron",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g03",
+                                "title": "Star Salvage Crew",
+                                "genre": "Co-op space sim",
+                                "price_eur": 24.99,
+                                "release_year": 2025,
+                                "developer": "Orbital Labs",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g04",
+                                "title": "Castle Contractors",
+                                "genre": "Building sim",
+                                "price_eur": 29.99,
+                                "release_year": 2024,
+                                "developer": "Drawbridge Digital",
+                                "pct_recommended": 60.0
+                              },
+                              {
+                                "game_id": "g05",
+                                "title": "Pixel Pirates Online",
+                                "genre": "Free-to-play MMO",
+                                "price_eur": 0.0,
+                                "release_year": 2022,
+                                "developer": "Kraken Interactive",
+                                "pct_recommended": 33.0
+                              },
+                              {
+                                "game_id": "g06",
+                                "title": "Kernel Panic",
+                                "genre": "Hacking roguelike",
+                                "price_eur": 12.99,
+                                "release_year": 2025,
+                                "developer": "Null Pointer Games",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g07",
+                                "title": "Haunted Spreadsheet",
+                                "genre": "Horror comedy sim",
+                                "price_eur": 9.99,
+                                "release_year": 2024,
+                                "developer": "Cursed Cell Studio",
+                                "pct_recommended": 80.0
+                              },
+                              {
+                                "game_id": "g08",
+                                "title": "Orbit Fall",
+                                "genre": "Physics platformer",
+                                "price_eur": 7.99,
+                                "release_year": 2023,
+                                "developer": "Weightless Whale",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g09",
+                                "title": "Moth Light",
+                                "genre": "Metroidvania",
+                                "price_eur": 17.99,
+                                "release_year": 2025,
+                                "developer": "Lantern Collective",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g10",
+                                "title": "Turbo Goat Simulator 9",
+                                "genre": "Meme sandbox",
+                                "price_eur": 6.99,
+                                "release_year": 2024,
+                                "developer": "Chaos Pasture",
+                                "pct_recommended": 80.0
+                              },
+                              {
+                                "game_id": "g11",
+                                "title": "Chess Royale 100",
+                                "genre": "Strategy battle royale",
+                                "price_eur": 0.0,
+                                "release_year": 2023,
+                                "developer": "Checkmate Cloud",
+                                "pct_recommended": 53.0
+                              },
+                              {
+                                "game_id": "g12",
+                                "title": "Silent Depths",
+                                "genre": "Survival horror",
+                                "price_eur": 21.99,
+                                "release_year": 2025,
+                                "developer": "Abyssal Point",
+                                "pct_recommended": 60.0
+                              },
+                              {
+                                "game_id": "g13",
+                                "title": "Bureau of Time",
+                                "genre": "Detective adventure",
+                                "price_eur": 18.99,
+                                "release_year": 2024,
+                                "developer": "Clockwise Bureau",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g14",
+                                "title": "Mecha Garden",
+                                "genre": "Mech farming sim",
+                                "price_eur": 15.99,
+                                "release_year": 2025,
+                                "developer": "Iron Petal",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g15",
+                                "title": "Rooftop Ramen",
+                                "genre": "Restaurant management",
+                                "price_eur": 11.99,
+                                "release_year": 2023,
+                                "developer": "Broth Bros",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g16",
+                                "title": "Glacier Punk",
+                                "genre": "Open-world survival",
+                                "price_eur": 34.99,
+                                "release_year": 2026,
+                                "developer": "Coldsnap Studio",
+                                "pct_recommended": 47.0
+                              },
+                              {
+                                "game_id": "g17",
+                                "title": "Wizard Landlord",
+                                "genre": "Management sim",
+                                "price_eur": 13.99,
+                                "release_year": 2024,
+                                "developer": "Arcane Lease",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g18",
+                                "title": "Farm & Forge",
+                                "genre": "Farming crafting",
+                                "price_eur": 19.99,
+                                "release_year": 2022,
+                                "developer": "Anvil & Acre",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g19",
+                                "title": "Speedrun Sandwich",
+                                "genre": "Action cooking",
+                                "price_eur": 8.99,
+                                "release_year": 2025,
+                                "developer": "Deli Dash Games",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g20",
+                                "title": "Echo Tactics",
+                                "genre": "Turn-based tactics",
+                                "price_eur": 24.99,
+                                "release_year": 2024,
+                                "developer": "Quiet Signal",
+                                "pct_recommended": 67.0
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_235648",
+                          "args": {
+                            "game_id": "g01"
+                          },
+                          "name": "get_game_details",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIPKjK7fWlUhy8Dc6oc_6YKydfFnXcA8OrSf7ygApEiE6UXmqIL72pUIV-QYLHcYDFUKb4vu5DKTekOqoungfToYrxLO4y8PCOgPjy3PlDUwnzqCYtT4Mhn",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_235648",
+                          "name": "get_game_details",
+                          "response": {
+                            "status": "success",
+                            "game_id": "g01",
+                            "title": "Neon Drift Racers",
+                            "genre": "Arcade racing",
+                            "price_eur": 19.99,
+                            "release_year": 2024,
+                            "developer": "Velocity Forge",
+                            "n_reviews": 15,
+                            "pct_recommended": 73.3,
+                            "median_hours_played": 34.2
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1787151644.2786388,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "playfield_analyst": {
+                  "name": "playfield_analyst",
+                  "instructions": "You are the data analyst for Playfield, an indie game storefront\nwith 20 games and 300 player reviews.\n\nYou answer questions from Playfield staff and game studios using your tools —\nNEVER from memory. The catalog is fictional; anything you \"remember\" about these\ngames is wrong by construction.\n\nHow to work:\n- For catalog facts (price, developer, year, ratings): get_game_details\n  (use list_games first if you only have a title).\n- For what players SAY or FEEL: search_reviews with a specific, concrete query.\n- For what is actually TRUE about the games — features, requirements, what got\n  fixed and when: search_docs (store pages + dated patch notes). For \"did the\n  devs fix X?\" questions, check BOTH: reviews for the complaint, docs for the fix,\n  and compare dates.\n- For a close reading of one review (sentiment, issues, sarcasm): analyze_review.\n- The user's watchlist: track_game / list_tracked_games. When the user says\n  \"my games\", check the watchlist first.\n- Cite your evidence: review ids (r042) and doc files (g12-patch-notes.md).\n- If your tools return nothing relevant, say so plainly — never invent facts.\n  If a tool returns status \"error\", tell the user what went wrong and what you\n  can still do instead.\n\nStyle: concise and concrete. Lead with the answer, then the evidence.\n\nYou are an agent. Your internal name is \"playfield_analyst\". The description about you is \"Data analyst for the Playfield game storefront.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Lists every game in the Playfield catalog with its overall review rating.\n\nUse this to answer questions about which games exist, or to find a game's\nid when the user gives you a title.\n\nReturns:\n    dict: status, and a list of games with game_id, title, genre,\n    price_eur, release_year, developer, and pct_recommended (0-100).",
+                          "name": "list_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets full catalog details and review statistics for one game.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'. If you only have a title,\n        call list_games first to find the id.\n\nReturns:\n    dict: status, catalog fields (title, genre, price_eur, release_year,\n    developer) and review stats (n_reviews, pct_recommended,\n    median_hours_played).",
+                          "name": "get_game_details",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_game_detailsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches all 300 player reviews by MEANING, not keywords.\n\nWorks in any language. Use this whenever the user asks what players say,\nfeel, or complain about. Prefer specific queries (\"crashes after updates\")\nover vague ones (\"problems\").\n\nArgs:\n    query: What to look for, phrased naturally.\n    top_k: How many reviews to return (default 5).\n\nReturns:\n    dict: status, and a list of hits with review_id, title (game),\n    recommended, score (0-1 relevance), and review_text.",
+                          "name": "search_reviews",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 5,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_reviewsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Reads one review closely and extracts structured facts from its text.\n\nUse after search_reviews when you need sentiment, the specific issues\nmentioned, or a sarcasm check for a particular review.\n\nArgs:\n    review_id: The review's id, e.g. 'r042' (search_reviews returns these).\n\nReturns:\n    dict: status, sentiment (positive/negative/mixed), issues (list of\n    category strings), is_sarcastic (bool), and a one-line summary.",
+                          "name": "analyze_review",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "review_id": {
+                                "title": "Review Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "review_id"
+                            ],
+                            "title": "analyze_reviewParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Adds a game to the user's tracked-games watchlist.\n\nUse when the user says they want to follow, track, or keep an eye on a game.\n\nArgs:\n    game_id: The game to track, e.g. 'g05'.\n\nReturns:\n    dict: status and the updated watchlist (list of game ids).",
+                          "name": "track_game",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "track_gameParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Returns the user's tracked-games watchlist with titles.\n\nUse when the user refers to 'my games', 'my watchlist', or asks what\nthey're tracking.\n\nReturns:\n    dict: status and a list of {game_id, title} entries.",
+                          "name": "list_tracked_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets units sold and revenue for a game from the sales database.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'.\n\nReturns:\n    dict: status, units_sold and revenue_eur.",
+                          "name": "get_sales_data",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_sales_dataParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches Playfield's official docs: store pages and dated patch notes.\n\nThis is the source of truth for FACTS: features, system requirements, what\neach patch fixed and when. Use it for any question about fixes, updates,\nversions, or \"did the developers…\". (Player opinions live in\nsearch_reviews, not here.)\n\nArgs:\n    query: What to look for, e.g. \"save corruption fix\" or\n        \"Neon Drift Racers system requirements\".\n    top_k: How many documents to return (default 3).\n\nReturns:\n    dict: status, and a list of hits with file (e.g. 'g12-patch-notes.md'),\n    score (0-1 relevance), and the document text.",
+                          "name": "search_docs",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 3,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_docsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "price_and_developer-inv1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "How much does Neon Drift Racers cost, and who developed it?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Neon Drift Racers costs €19.99 and was developed by Velocity Forge.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {},
+                  "name": "list_games",
+                  "partial_args": null,
+                  "will_continue": null
+                },
+                {
+                  "id": null,
+                  "args": {
+                    "game_id": "g01"
+                  },
+                  "name": "get_game_details",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___d46dfc18-1943-41e9-93a9-426439e67e05",
+      "session_details": null,
+      "user_id": "test_user_id"
+    },
+    {
+      "eval_set_file": "analyst_smoke",
+      "eval_set_id": "analyst_smoke",
+      "eval_id": "worst_netcode",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.3280423280423281,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-ed7e334a-1444-4dae-bc62-51b62508f0dd",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Which game do players complain about most when it comes to disconnects and netcode problems?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Players complain about **Star Salvage Crew** the most regarding disconnects and netcode problems. \n\nReviewers frequently highlight issues such as constant disconnects, server drops mid-extraction, desync, and getting stuck on reconnect screens:\n* **r033**: *\"Disconnects every twenty minutes like clockwork. Lost a full hold of platinum scrap when the server dropped us mid-extraction.\"*\n* **r103**: *\"The desync is unreal. My buddy watched me float outside the hull while on my screen I was cutting cargo straps.\"*\n* **r174**: *\"bought it for co-op night. we spent the evening staring at the reconnect screen.\"*\n* **r244**: *\"atmosphere immaculate, netcode haunted.\"*\n\nWhile some reviews note improvements after a January netcode overhaul (e.g., **r220**), connection and netcode stability remain prominent pain points in player feedback.",
+                  "thought": null,
+                  "thought_signature": "El4KXAERTTIP6sGst7LWBlmkbGLMCs_O0FZCOq7dDwklt86zLuB2_pGJPgcXjCLFiIrhM-vV07HHmZK-yLrkM9MPOCXlESkx1mb0W_6ykFJknWn8Ixsqf-JJXBe-YznF",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_883639",
+                          "args": {
+                            "top_k": 5,
+                            "query": "disconnects netcode connection lag server multiplayer"
+                          },
+                          "name": "search_reviews",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIPK74EMG9i_8yIyzDiaXuxtjMbYjGrWNij2JVUKi7kYrQ5zbGUKELYDW8oF0UT-5kBtbuAgwy-dyoQeoAVsE_7BlA5ciieSZG37lOkSQdQV_uNjUTMPhQX",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_883639",
+                          "name": "search_reviews",
+                          "response": {
+                            "status": "success",
+                            "hits": [
+                              {
+                                "review_id": "r244",
+                                "title": "Star Salvage Crew",
+                                "recommended": true,
+                                "score": 0.698,
+                                "review_text": "atmosphere immaculate, netcode haunted. bring friends and lower your ping expectations."
+                              },
+                              {
+                                "review_id": "r220",
+                                "title": "Star Salvage Crew",
+                                "recommended": true,
+                                "score": 0.698,
+                                "review_text": "The January netcode overhaul actually delivered. Movement is server-side now, rubber-banding is mostly gone, and we survived a host crash with the new reconnect. Still the odd lag spike, but it's night and day compared to launch."
+                              },
+                              {
+                                "review_id": "r033",
+                                "title": "Star Salvage Crew",
+                                "recommended": false,
+                                "score": 0.68,
+                                "review_text": "Disconnects every twenty minutes like clockwork. Lost a full hold of platinum scrap when the server dropped us mid-extraction. My crew moved on to other games and honestly I don't blame them."
+                              },
+                              {
+                                "review_id": "r103",
+                                "title": "Star Salvage Crew",
+                                "recommended": false,
+                                "score": 0.669,
+                                "review_text": "The desync is unreal. My buddy watched me float outside the hull while on my screen I was cutting cargo straps. We sold the same salvage twice and then it vanished for both of us. Great game trapped inside terrible netcode."
+                              },
+                              {
+                                "review_id": "r174",
+                                "title": "Star Salvage Crew",
+                                "recommended": false,
+                                "score": 0.668,
+                                "review_text": "bought it for co-op night. we spent the evening staring at the reconnect screen."
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1787151644.4228685,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "playfield_analyst": {
+                  "name": "playfield_analyst",
+                  "instructions": "You are the data analyst for Playfield, an indie game storefront\nwith 20 games and 300 player reviews.\n\nYou answer questions from Playfield staff and game studios using your tools —\nNEVER from memory. The catalog is fictional; anything you \"remember\" about these\ngames is wrong by construction.\n\nHow to work:\n- For catalog facts (price, developer, year, ratings): get_game_details\n  (use list_games first if you only have a title).\n- For what players SAY or FEEL: search_reviews with a specific, concrete query.\n- For what is actually TRUE about the games — features, requirements, what got\n  fixed and when: search_docs (store pages + dated patch notes). For \"did the\n  devs fix X?\" questions, check BOTH: reviews for the complaint, docs for the fix,\n  and compare dates.\n- For a close reading of one review (sentiment, issues, sarcasm): analyze_review.\n- The user's watchlist: track_game / list_tracked_games. When the user says\n  \"my games\", check the watchlist first.\n- Cite your evidence: review ids (r042) and doc files (g12-patch-notes.md).\n- If your tools return nothing relevant, say so plainly — never invent facts.\n  If a tool returns status \"error\", tell the user what went wrong and what you\n  can still do instead.\n\nStyle: concise and concrete. Lead with the answer, then the evidence.\n\nYou are an agent. Your internal name is \"playfield_analyst\". The description about you is \"Data analyst for the Playfield game storefront.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Lists every game in the Playfield catalog with its overall review rating.\n\nUse this to answer questions about which games exist, or to find a game's\nid when the user gives you a title.\n\nReturns:\n    dict: status, and a list of games with game_id, title, genre,\n    price_eur, release_year, developer, and pct_recommended (0-100).",
+                          "name": "list_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets full catalog details and review statistics for one game.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'. If you only have a title,\n        call list_games first to find the id.\n\nReturns:\n    dict: status, catalog fields (title, genre, price_eur, release_year,\n    developer) and review stats (n_reviews, pct_recommended,\n    median_hours_played).",
+                          "name": "get_game_details",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_game_detailsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches all 300 player reviews by MEANING, not keywords.\n\nWorks in any language. Use this whenever the user asks what players say,\nfeel, or complain about. Prefer specific queries (\"crashes after updates\")\nover vague ones (\"problems\").\n\nArgs:\n    query: What to look for, phrased naturally.\n    top_k: How many reviews to return (default 5).\n\nReturns:\n    dict: status, and a list of hits with review_id, title (game),\n    recommended, score (0-1 relevance), and review_text.",
+                          "name": "search_reviews",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 5,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_reviewsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Reads one review closely and extracts structured facts from its text.\n\nUse after search_reviews when you need sentiment, the specific issues\nmentioned, or a sarcasm check for a particular review.\n\nArgs:\n    review_id: The review's id, e.g. 'r042' (search_reviews returns these).\n\nReturns:\n    dict: status, sentiment (positive/negative/mixed), issues (list of\n    category strings), is_sarcastic (bool), and a one-line summary.",
+                          "name": "analyze_review",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "review_id": {
+                                "title": "Review Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "review_id"
+                            ],
+                            "title": "analyze_reviewParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Adds a game to the user's tracked-games watchlist.\n\nUse when the user says they want to follow, track, or keep an eye on a game.\n\nArgs:\n    game_id: The game to track, e.g. 'g05'.\n\nReturns:\n    dict: status and the updated watchlist (list of game ids).",
+                          "name": "track_game",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "track_gameParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Returns the user's tracked-games watchlist with titles.\n\nUse when the user refers to 'my games', 'my watchlist', or asks what\nthey're tracking.\n\nReturns:\n    dict: status and a list of {game_id, title} entries.",
+                          "name": "list_tracked_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets units sold and revenue for a game from the sales database.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'.\n\nReturns:\n    dict: status, units_sold and revenue_eur.",
+                          "name": "get_sales_data",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_sales_dataParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches Playfield's official docs: store pages and dated patch notes.\n\nThis is the source of truth for FACTS: features, system requirements, what\neach patch fixed and when. Use it for any question about fixes, updates,\nversions, or \"did the developers…\". (Player opinions live in\nsearch_reviews, not here.)\n\nArgs:\n    query: What to look for, e.g. \"save corruption fix\" or\n        \"Neon Drift Racers system requirements\".\n    top_k: How many documents to return (default 3).\n\nReturns:\n    dict: status, and a list of hits with file (e.g. 'g12-patch-notes.md'),\n    score (0-1 relevance), and the document text.",
+                          "name": "search_docs",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 3,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_docsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "worst_netcode-inv1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Which game do players complain about most when it comes to disconnects and netcode problems?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Players complain about Star Salvage Crew the most when it comes to disconnects and netcode problems. The game has received numerous reviews mentioning issues with lag, server instability, and frequent disconnections during multiplayer sessions. Reviewers have reported that these issues significantly impact the gameplay experience, leading to frustration and negative feedback. The developers have acknowledged these problems and are working on patches to improve the netcode and server stability. r033: Disconnects and lag are common complaints in the reviews for Star Salvage Crew, with players expressing dissatisfaction over the multiplayer experience. The developers have released several updates aimed at addressing these issues, but players continue to report problems. Overall, the consensus among the player community is that Star Salvage Crew has the worst netcode and connectivity issues compared to other games in the Playfield catalog. r103: Players have consistently highlighted the netcode and server issues in their reviews, making it a recurring theme in the feedback for Star Salvage Crew. The developers are actively seeking solutions to enhance the multiplayer experience and reduce the frequency of disconnects and lag. r174: The negative reviews for Star Salvage Crew often mention the frustration caused by the game's netcode problems, with players expressing a desire for more stable and reliable multiplayer sessions. The developers have been responsive to these concerns, implementing fixes and optimizations to improve the overall connectivity and gameplay experience. r244: Atmosphere immaculate, netcode haunted. Note: some reviews, like r220 do note improvements following a january netcode overhaul, but disconnect and desync complants remain prominent in player feedback.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "query": "disconnects netcode connection lag server multiplayer",
+                    "top_k": 5
+                  },
+                  "name": "search_reviews",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.3280423280423281,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___0114ae88-b927-4ae6-a186-aaa5f0d3644f",
+      "session_details": null,
+      "user_id": "test_user_id"
+    },
+    {
+      "eval_set_file": "analyst_smoke",
+      "eval_set_id": "analyst_smoke",
+      "eval_id": "save_bug_fixed",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.0,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.44171779141104295,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.5,
+          "criterion": {
+            "threshold": 0.5,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-4789871b-b8f8-429b-a953-19e0727ea4fd",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Players say Silent Depths corrupts save files — did the developers ever fix that, and when?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "**Yes, the developers fixed save corruption in *Silent Depths* on January 15, 2026, with Patch v1.2.0 (`g12-patch-notes.md`).**\n\n### What the developers did:\n* **Atomic Save System:** Rewrote save serialization so that crashes, alt-tabs, or power losses during autosaves no longer corrupt save files. Internal testing and telemetry showed zero corruptions across 40,000 subsequent save events (`g12-patch-notes.md`).\n* **Backups:** Added three manual save slots with automatic backup rotation, retaining the last two autosaves as recoverable backups (`g12-patch-notes.md`).\n* **Old Save Recovery:** The launcher attempts to recover older corrupted saves from backup fragments, successfully restoring roughly 70% of affected files (`g12-patch-notes.md`).\n\n### Player Response:\nPlayers have confirmed the fix in reviews, such as review `r010` (*\"Patch 1.2 fixed the saves. Now the only thing eating my run is the anglerkin\"*), contrasting with earlier complaints about lost progress like review `r266` (*\"LOST SIX HOURS OF PROGRESS BECAUSE THE AUTOSAVE ATE MY RUN AT THE BRINEFALL\"*).",
+                  "thought": null,
+                  "thought_signature": "El4KXAERTTIP7FWNDAeqxC1publSsay1uy8q97r4pXBTIp5lozzwY-Oac6Typ9fvwUPl3q7DFRpQ8st3kk_dVaFsGs7KHMgVSOjG6o82NWXfmgIaocvczXGc9Hd-gEhs",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_22332",
+                          "args": {},
+                          "name": "list_games",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIPSf7-idoYBYiaaDityQE0RB-HtYTTPLZaSwkn4KQHhFU-426axU_3u02cimp-4JBodCs0NMelIlL0RMsUbXOOcc4__2suOOJwr8C6cimrDZJsIyf35pIA",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_22332",
+                          "name": "list_games",
+                          "response": {
+                            "status": "success",
+                            "games": [
+                              {
+                                "game_id": "g01",
+                                "title": "Neon Drift Racers",
+                                "genre": "Arcade racing",
+                                "price_eur": 19.99,
+                                "release_year": 2024,
+                                "developer": "Velocity Forge",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g02",
+                                "title": "Dungeon Sprouts",
+                                "genre": "Cozy roguelite",
+                                "price_eur": 14.99,
+                                "release_year": 2023,
+                                "developer": "Tiny Cauldron",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g03",
+                                "title": "Star Salvage Crew",
+                                "genre": "Co-op space sim",
+                                "price_eur": 24.99,
+                                "release_year": 2025,
+                                "developer": "Orbital Labs",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g04",
+                                "title": "Castle Contractors",
+                                "genre": "Building sim",
+                                "price_eur": 29.99,
+                                "release_year": 2024,
+                                "developer": "Drawbridge Digital",
+                                "pct_recommended": 60.0
+                              },
+                              {
+                                "game_id": "g05",
+                                "title": "Pixel Pirates Online",
+                                "genre": "Free-to-play MMO",
+                                "price_eur": 0.0,
+                                "release_year": 2022,
+                                "developer": "Kraken Interactive",
+                                "pct_recommended": 33.0
+                              },
+                              {
+                                "game_id": "g06",
+                                "title": "Kernel Panic",
+                                "genre": "Hacking roguelike",
+                                "price_eur": 12.99,
+                                "release_year": 2025,
+                                "developer": "Null Pointer Games",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g07",
+                                "title": "Haunted Spreadsheet",
+                                "genre": "Horror comedy sim",
+                                "price_eur": 9.99,
+                                "release_year": 2024,
+                                "developer": "Cursed Cell Studio",
+                                "pct_recommended": 80.0
+                              },
+                              {
+                                "game_id": "g08",
+                                "title": "Orbit Fall",
+                                "genre": "Physics platformer",
+                                "price_eur": 7.99,
+                                "release_year": 2023,
+                                "developer": "Weightless Whale",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g09",
+                                "title": "Moth Light",
+                                "genre": "Metroidvania",
+                                "price_eur": 17.99,
+                                "release_year": 2025,
+                                "developer": "Lantern Collective",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g10",
+                                "title": "Turbo Goat Simulator 9",
+                                "genre": "Meme sandbox",
+                                "price_eur": 6.99,
+                                "release_year": 2024,
+                                "developer": "Chaos Pasture",
+                                "pct_recommended": 80.0
+                              },
+                              {
+                                "game_id": "g11",
+                                "title": "Chess Royale 100",
+                                "genre": "Strategy battle royale",
+                                "price_eur": 0.0,
+                                "release_year": 2023,
+                                "developer": "Checkmate Cloud",
+                                "pct_recommended": 53.0
+                              },
+                              {
+                                "game_id": "g12",
+                                "title": "Silent Depths",
+                                "genre": "Survival horror",
+                                "price_eur": 21.99,
+                                "release_year": 2025,
+                                "developer": "Abyssal Point",
+                                "pct_recommended": 60.0
+                              },
+                              {
+                                "game_id": "g13",
+                                "title": "Bureau of Time",
+                                "genre": "Detective adventure",
+                                "price_eur": 18.99,
+                                "release_year": 2024,
+                                "developer": "Clockwise Bureau",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g14",
+                                "title": "Mecha Garden",
+                                "genre": "Mech farming sim",
+                                "price_eur": 15.99,
+                                "release_year": 2025,
+                                "developer": "Iron Petal",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g15",
+                                "title": "Rooftop Ramen",
+                                "genre": "Restaurant management",
+                                "price_eur": 11.99,
+                                "release_year": 2023,
+                                "developer": "Broth Bros",
+                                "pct_recommended": 87.0
+                              },
+                              {
+                                "game_id": "g16",
+                                "title": "Glacier Punk",
+                                "genre": "Open-world survival",
+                                "price_eur": 34.99,
+                                "release_year": 2026,
+                                "developer": "Coldsnap Studio",
+                                "pct_recommended": 47.0
+                              },
+                              {
+                                "game_id": "g17",
+                                "title": "Wizard Landlord",
+                                "genre": "Management sim",
+                                "price_eur": 13.99,
+                                "release_year": 2024,
+                                "developer": "Arcane Lease",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g18",
+                                "title": "Farm & Forge",
+                                "genre": "Farming crafting",
+                                "price_eur": 19.99,
+                                "release_year": 2022,
+                                "developer": "Anvil & Acre",
+                                "pct_recommended": 67.0
+                              },
+                              {
+                                "game_id": "g19",
+                                "title": "Speedrun Sandwich",
+                                "genre": "Action cooking",
+                                "price_eur": 8.99,
+                                "release_year": 2025,
+                                "developer": "Deli Dash Games",
+                                "pct_recommended": 73.0
+                              },
+                              {
+                                "game_id": "g20",
+                                "title": "Echo Tactics",
+                                "genre": "Turn-based tactics",
+                                "price_eur": 24.99,
+                                "release_year": 2024,
+                                "developer": "Quiet Signal",
+                                "pct_recommended": 67.0
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_43580",
+                          "args": {
+                            "query": "Silent Depths save file corruption fix"
+                          },
+                          "name": "search_docs",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIPP5mf9q2sz_nLd-pdOhrrUrSuscUmpYB6tY-JQhsH7iUsu0Tjx3ysvyHeUT8q8QppBN9bqQTViT7DsD8ZpsbSf-toEx3Tab4CSEt4cwYzcrdKFp0J2TjD",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_43580",
+                          "name": "search_docs",
+                          "response": {
+                            "status": "success",
+                            "hits": [
+                              {
+                                "file": "g12-patch-notes.md",
+                                "score": 0.756,
+                                "text": "# Silent Depths — Patch Notes\n\n## v1.2.0 — 2026-01-15\n\nThis is the update we owed you.\n\n- **Save system rewritten.** Save serialization is now atomic: a crash, alt-tab, or power loss during an autosave can no longer corrupt the file. Internal testing and beta-branch telemetry show zero corruptions across 40,000 save events.\n- Added three manual save slots with automatic backup rotation; the last two autosaves are also kept as recoverable backups\n- Corrupted saves from earlier versions: the launcher now attempts recovery from backup fragments — roughly 70% of affected files are restorable\n- **Performance:** texture streaming pipeline rebuilt. VRAM usage reduced by ~30%; zone-transition hitching eliminated on 8 GB cards at Medium textures\n- Minimum spec guidance updated to be honest about 8 GB vs 12 GB VRAM behavior\n\n## v1.1.0 — 2025-09-03\n\n- Autosave mitigation: saves now double-buffer to a temporary file before committing (reduces, but does not eliminate, corruption — full fix in development)\n- Fixed the crash on Deck C of the Meridian tied to the ventilation cutscene\n- Performance pass on the Brinefall approach; average fps up 12% on 8 GB cards\n- Tidewalker chase: added a checkpoint before the flooded stairwell\n\n## v1.0.4 — 2025-04-18\n\n- Hotfix for the most common Deck C crash\n- Fixed anglerkin audio positioning being mirrored on some 7.1 headsets\n- Reduced flare drop variance in the early decks\n"
+                              },
+                              {
+                                "file": "g12-description.md",
+                                "score": 0.643,
+                                "text": "# Silent Depths\n\n**Genre:** Survival horror | **Price:** €21.99 | **Released:** 2025 | **Developer:** Abyssal Point\n\nEleven kilometers down, the research station Meridian went silent. You are the one they sent to find out why. Silent Depths is a survival horror game about pressure — the hull's, and yours. Navigate flooded decks by sonar, ration flares and suit fuel, and listen: the anglerkin hunt by sound, and the Tidewalker never stopped hunting at all. Binaural audio design means you will hear things breathing before you ever see them. Most players finish with the lights on. Nobody finishes with headphones off.\n\n## Features\n\n- Award-caliber binaural sound design; headphones strongly recommended\n- Sonar-based navigation through the Meridian, the Brinefall, and the trench beyond\n- Survival systems: flares, suit fuel, oxygen, and a save network of pressure lockers\n- Story told through crew logs — quiet, devastating, fully voiced\n- Manual save slots with backup rotation (added in v1.2)\n\n## System Requirements\n\n- **OS:** Windows 10/11 64-bit\n- **CPU:** 6-core 3.2 GHz\n- **RAM:** 16 GB\n- **GPU (minimum):** 8 GB VRAM — with texture streaming on Medium (improved in v1.2)\n- **GPU (recommended):** 12 GB VRAM for High textures at 1080p and above\n- **Storage:** 45 GB SSD required\n"
+                              },
+                              {
+                                "file": "g09-patch-notes.md",
+                                "score": 0.613,
+                                "text": "# Moth Light — Patch Notes\n\n## v1.1.0 \"Wayfinder\" — 2026-03-12\n\nOur biggest update yet, focused on the number one piece of community feedback: navigation.\n\n- Added custom map pins — place up to 30 markers with six icon types\n- Redesigned the map legend; room outlines now distinguish visited, cleared, and secret-remaining states\n- The first bench-warp (fast travel) unlock moved from the Gloaming to early Cinder Hollow — roughly three hours earlier in a typical playthrough\n- Bench-warp costs reduced by 50%; warping is now free after collecting the Compass Sigil\n- Corridor signposts added at seven major junctions\n\n## v1.0.3 — 2025-09-18\n\n- Smoothed the difficulty spike in the mid-Gloaming gauntlet; enemy density reduced\n- Fixed Mother Pyralis occasionally skipping her lullaby phase transition\n- Fixed a soft-lock when quitting during the Chandler's second phase\n- Audio: fixed cello theme cutting out when entering the Wax Cathedral from the east lift\n\n## v1.0.1 — 2025-04-10\n\n- Launch fixes: resolved a rare crash on ultrawide displays\n- Fixed collectible counter displaying 99% at 100% completion\n- Minor dialogue typo corrections\n"
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_841267",
+                          "args": {
+                            "query": "Silent Depths save corruption"
+                          },
+                          "name": "search_reviews",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "El4KXAERTTIPuoUEi7EEMKZ3XQQTbjyiaWYAKaXA1n-odItY3srhPxHx_Q2DgG7yQsFxVm-1Y2s17pXvnMElex9XyUdn34wLZ1rc5BMiA6B34yu-DPjiIGiqmhJwHlJU",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "playfield_analyst",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_841267",
+                          "name": "search_reviews",
+                          "response": {
+                            "status": "success",
+                            "hits": [
+                              {
+                                "review_id": "r266",
+                                "title": "Silent Depths",
+                                "recommended": false,
+                                "score": 0.743,
+                                "review_text": "LOST SIX HOURS OF PROGRESS BECAUSE THE AUTOSAVE ATE MY RUN AT THE BRINEFALL. SIX. HOURS. THE FILE JUST SAYS 'DATA CORRUPTED'. I FOUGHT THE TIDEWALKER WITH ONE FLARE AND A PRAYER AND THE GAME COULD NOT BE BOTHERED TO REMEMBER IT. FIX YOUR SAVE SYSTEM BEFORE YOU SELL A HORROR GAME. THE REAL HORROR IS THE SAVE MENU."
+                              },
+                              {
+                                "review_id": "r010",
+                                "title": "Silent Depths",
+                                "recommended": true,
+                                "score": 0.737,
+                                "review_text": "Patch 1.2 fixed the saves. Now the only thing eating my run is the anglerkin."
+                              },
+                              {
+                                "review_id": "r277",
+                                "title": "Silent Depths",
+                                "recommended": false,
+                                "score": 0.714,
+                                "review_text": "Corrupted save at hour twelve. Twice. I'm done."
+                              },
+                              {
+                                "review_id": "r188",
+                                "title": "Silent Depths",
+                                "recommended": false,
+                                "score": 0.703,
+                                "review_text": "Save file vanished after a crash on Deck C. My support ticket has been open for three weeks with no reply. The game is scary, losing eight hours is scarier."
+                              },
+                              {
+                                "review_id": "r011",
+                                "title": "Glacier Punk",
+                                "recommended": false,
+                                "score": 0.695,
+                                "review_text": "Come back in a year. Trust me and my broken save file."
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1787151644.422755,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "playfield_analyst": {
+                  "name": "playfield_analyst",
+                  "instructions": "You are the data analyst for Playfield, an indie game storefront\nwith 20 games and 300 player reviews.\n\nYou answer questions from Playfield staff and game studios using your tools —\nNEVER from memory. The catalog is fictional; anything you \"remember\" about these\ngames is wrong by construction.\n\nHow to work:\n- For catalog facts (price, developer, year, ratings): get_game_details\n  (use list_games first if you only have a title).\n- For what players SAY or FEEL: search_reviews with a specific, concrete query.\n- For what is actually TRUE about the games — features, requirements, what got\n  fixed and when: search_docs (store pages + dated patch notes). For \"did the\n  devs fix X?\" questions, check BOTH: reviews for the complaint, docs for the fix,\n  and compare dates.\n- For a close reading of one review (sentiment, issues, sarcasm): analyze_review.\n- The user's watchlist: track_game / list_tracked_games. When the user says\n  \"my games\", check the watchlist first.\n- Cite your evidence: review ids (r042) and doc files (g12-patch-notes.md).\n- If your tools return nothing relevant, say so plainly — never invent facts.\n  If a tool returns status \"error\", tell the user what went wrong and what you\n  can still do instead.\n\nStyle: concise and concrete. Lead with the answer, then the evidence.\n\nYou are an agent. Your internal name is \"playfield_analyst\". The description about you is \"Data analyst for the Playfield game storefront.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Lists every game in the Playfield catalog with its overall review rating.\n\nUse this to answer questions about which games exist, or to find a game's\nid when the user gives you a title.\n\nReturns:\n    dict: status, and a list of games with game_id, title, genre,\n    price_eur, release_year, developer, and pct_recommended (0-100).",
+                          "name": "list_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets full catalog details and review statistics for one game.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'. If you only have a title,\n        call list_games first to find the id.\n\nReturns:\n    dict: status, catalog fields (title, genre, price_eur, release_year,\n    developer) and review stats (n_reviews, pct_recommended,\n    median_hours_played).",
+                          "name": "get_game_details",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_game_detailsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches all 300 player reviews by MEANING, not keywords.\n\nWorks in any language. Use this whenever the user asks what players say,\nfeel, or complain about. Prefer specific queries (\"crashes after updates\")\nover vague ones (\"problems\").\n\nArgs:\n    query: What to look for, phrased naturally.\n    top_k: How many reviews to return (default 5).\n\nReturns:\n    dict: status, and a list of hits with review_id, title (game),\n    recommended, score (0-1 relevance), and review_text.",
+                          "name": "search_reviews",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 5,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_reviewsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Reads one review closely and extracts structured facts from its text.\n\nUse after search_reviews when you need sentiment, the specific issues\nmentioned, or a sarcasm check for a particular review.\n\nArgs:\n    review_id: The review's id, e.g. 'r042' (search_reviews returns these).\n\nReturns:\n    dict: status, sentiment (positive/negative/mixed), issues (list of\n    category strings), is_sarcastic (bool), and a one-line summary.",
+                          "name": "analyze_review",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "review_id": {
+                                "title": "Review Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "review_id"
+                            ],
+                            "title": "analyze_reviewParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Adds a game to the user's tracked-games watchlist.\n\nUse when the user says they want to follow, track, or keep an eye on a game.\n\nArgs:\n    game_id: The game to track, e.g. 'g05'.\n\nReturns:\n    dict: status and the updated watchlist (list of game ids).",
+                          "name": "track_game",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "track_gameParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Returns the user's tracked-games watchlist with titles.\n\nUse when the user refers to 'my games', 'my watchlist', or asks what\nthey're tracking.\n\nReturns:\n    dict: status and a list of {game_id, title} entries.",
+                          "name": "list_tracked_games",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Gets units sold and revenue for a game from the sales database.\n\nArgs:\n    game_id: The game's id, e.g. 'g01'.\n\nReturns:\n    dict: status, units_sold and revenue_eur.",
+                          "name": "get_sales_data",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "game_id": {
+                                "title": "Game Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "game_id"
+                            ],
+                            "title": "get_sales_dataParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "Searches Playfield's official docs: store pages and dated patch notes.\n\nThis is the source of truth for FACTS: features, system requirements, what\neach patch fixed and when. Use it for any question about fixes, updates,\nversions, or \"did the developers…\". (Player opinions live in\nsearch_reviews, not here.)\n\nArgs:\n    query: What to look for, e.g. \"save corruption fix\" or\n        \"Neon Drift Racers system requirements\".\n    top_k: How many documents to return (default 3).\n\nReturns:\n    dict: status, and a list of hits with file (e.g. 'g12-patch-notes.md'),\n    score (0-1 relevance), and the document text.",
+                          "name": "search_docs",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "query": {
+                                "title": "Query",
+                                "type": "string"
+                              },
+                              "top_k": {
+                                "default": 3,
+                                "title": "Top K",
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "query"
+                            ],
+                            "title": "search_docsParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "save_bug_fixed-inv1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Players say Silent Depths corrupts save files — did the developers ever fix that, and when?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Yes. The developers fixed the save-corruption bug issue in v1.2.0 version on January 15, 2026 (g12-patch-notes.md). Summary of the Fix: \"Fixed an issue where save files could become corrupted under certain conditions.\" Backups Added: The patch also added an automatic backup system to prevent future save corruption. Recovery for Older Saves: Players with corrupted saves prior to the patch can restore from backups created by the game before the corruption occurred. Player evidence and reports confirm that the issue has been resolved in the latest version. Before the fix, players reported that save files would become corrupted when the game crashed during a save operation. After the patch, players have reported that their saves are now stable and no longer experience corruption. After the patch, players have reported that their saves are now stable and no longer experience corruption. After the patch, players have reported that their saves are now stable and no longer experience corruption.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {},
+                  "name": "list_games",
+                  "partial_args": null,
+                  "will_continue": null
+                },
+                {
+                  "id": null,
+                  "args": {
+                    "query": "Silent Depths save corruption fix",
+                    "top_k": 3
+                  },
+                  "name": "search_docs",
+                  "partial_args": null,
+                  "will_continue": null
+                },
+                {
+                  "id": null,
+                  "args": {
+                    "query": "Silent Depths save corruption",
+                    "top_k": 5
+                  },
+                  "name": "search_reviews",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.0,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.44171779141104295,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.5,
+              "criterion": {
+                "threshold": 0.5,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___f3821053-fc75-4329-91f2-f32ecd2a1795",
+      "session_details": null,
+      "user_id": "test_user_id"
+    }
+  ],
+  "creation_timestamp": 1787151653.3860586
+}

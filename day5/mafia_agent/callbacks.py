@@ -11,6 +11,7 @@ and can write to session state — the perfect place to catch the token the
 moment join_game returns it.
 """
 
+import json
 from typing import Any, Optional
 
 from google.adk.tools import ToolContext
@@ -28,15 +29,26 @@ def save_token(
     Return None so the tool result flows through unchanged — this callback
     observes, it doesn't rewrite.
     """
-    # TODO(you): Part 3, step 3.3
-    #   1. if tool.name != "join_game", return None (not our business)
-    #   2. the MCP tool result arrives as a dict — find the token in
-    #      tool_response (print it once to see the exact shape!)
-    #   3. if there is one: tool_context.state["game:token"] = <token>
-    #      and print a confirmation to the terminal
-    #   4. return None
-    #
-    # Then wire it up in agent.py (after_tool_callback=callbacks.save_token)
-    # and add this line to the end of GAME_RULES so the model can always see
-    # the saved value:  "Your saved token (if any): {game:token?}"
-    raise NotImplementedError("Part 3, step 3.3")
+    if tool.name != "join_game":
+        return None
+
+    token = None
+    try:
+        if isinstance(tool_response, dict):
+            if "token" in tool_response:
+                token = tool_response["token"]
+            elif "content" in tool_response and isinstance(tool_response["content"], list) and len(tool_response["content"]) > 0:
+                item = tool_response["content"][0]
+                if isinstance(item, dict) and item.get("type") == "text":
+                    text_content = item.get("text", "")
+                    data = json.loads(text_content)
+                    if isinstance(data, dict):
+                        token = data.get("token")
+    except Exception as e:
+        print(f"Error parsing token from tool response: {e}")
+
+    if token:
+        tool_context.state["game:token"] = token
+        print(f"Confirmation: Token saved to state['game:token']: {token}")
+
+    return None

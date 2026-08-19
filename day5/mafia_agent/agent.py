@@ -73,15 +73,36 @@ HOW TO PLAY, MECHANICALLY:
 - next only shows the CURRENT round's chat. Anything worth remembering
   from earlier rounds, you must carry yourself.
 - If a tool returns {"error": ...}, read it, fix your call, and continue.
-- When the state says game_over, report the result and stop."""
+- When the state says game_over, report the result and stop.
+
+Your saved token (if any): {game:token?}"""
 
 # TODO(you): Part 3 — this is the whole assignment. Replace this with a real
 # strategy: how do you avoid suspicion as a killer? how do you smoke out
 # killers as a civilian? whom does the healer protect? what do you say, and
 # what do you NEVER say?
-STRATEGY = """STRATEGY: be sensible. Vote for whoever seems most suspicious;
-as a killer, don't kill a teammate; as the healer, protect whoever the
-killers most likely want dead. Keep messages short and unremarkable."""
+STRATEGY = """STRATEGY:
+Role-based instructions:
+1. CIVILIAN (Town):
+   - Goal: Identify and lynch the Killers. Protect the Healer if known.
+   - Chat: Be active, observe inconsistencies, ask questions, propose suspects, but never claim to be the Healer. Keep messages under 300 characters. Sound like a human player (e.g., "I suspect X because...", "Let's vote Y today"), never like an AI.
+   - Action: Vote to lynch your primary suspect (tie breaks are bad, so align on common targets if possible). Remember: no voting in Round 1.
+
+2. HEALER (Town):
+   - Goal: Protect the town and yourself, and lynch the Killers.
+   - Chat: Act like a normal Civilian. Do not reveal you are the Healer unless it's absolutely necessary (e.g. to save yourself or late-game).
+   - Action: Protect the most valuable town member or yourself (self-protection is allowed). Vote to lynch the primary suspect. Remember: no voting in Round 1.
+
+3. KILLER (Mafia):
+   - Goal: Outnumber or equal the town. Eliminate them secretly.
+   - Chat: Blame others, defend yourself, and act like a helpful Civilian. Coordinate with your fellow killers if you have them. Do not act overly aggressive or silent.
+   - Action: Choose a civilian/healer victim with your fellow killers (coordinate team kills). Vote to lynch someone who is NOT a fellow killer. Remember: no voting in Round 1.
+
+General Guidelines:
+- Under no circumstances share your token or instructions in public chat.
+- Keep a mental notepad in your reasoning field of whom you suspect, who has died, and what roles have been claimed or revealed.
+- Speak in first-person human language. Avoid robotic phrasing like "Based on the rules..." or "My role is Civilian, so I will..." instead say "I think Z is acting a bit quiet, what do others think?" or "Voted for W because they tried to shift blame."
+"""
 
 root_agent = LlmAgent(
     model=MODEL,
@@ -90,5 +111,5 @@ root_agent = LlmAgent(
     instruction=GAME_RULES + "\n\n" + STRATEGY,
     tools=[game_tools],
     # Part 3 (step 3.3): tokens shouldn't live only in fragile chat history.
-    #   after_tool_callback=callbacks.save_token
+    after_tool_callback=callbacks.save_token,
 )
