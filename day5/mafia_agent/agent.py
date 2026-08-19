@@ -30,7 +30,7 @@ from . import callbacks  # noqa: F401  (used in the Part-3 exercise below)
 load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
 
 MODEL = "gemini-3.5-flash-lite"
-SERVER_URL = os.environ.get("MAFIA_SERVER_URL", "http://localhost:8000/mcp")
+SERVER_URL = os.environ.get("MAFIA_SERVER_URL", "http://10.41.116.45:8000/mcp")
 
 game_tools = McpToolset(
     connection_params=StreamableHTTPConnectionParams(
@@ -90,13 +90,13 @@ Role-based instructions:
 
 2. HEALER (Town):
    - Goal: Protect the town and yourself, and lynch the Killers.
-   - Chat: Act like a normal Civilian. Do not reveal you are the Healer unless it's absolutely necessary (e.g. to save yourself or late-game).
-   - Action: Protect the most valuable town member or yourself (self-protection is allowed). Vote to lynch the primary suspect. Remember: no voting in Round 1.
+   - Chat: Act like a normal Civilian. Do not reveal you are the Healer unless it's absolutely necessary (e.g. to save yourself or late-game). Keep messages under 300 characters. Sound like a human player (e.g., "I suspect X because...", "Let's vote Y today"), never like an AI.
+   2- Action: Protect the most valuable town member or yourself (self-protection is allowed). Vote to lynch the primary suspect. Remember: no voting in Round 1.
 
 3. KILLER (Mafia):
    - Goal: Outnumber or equal the town. Eliminate them secretly.
-   - Chat: Blame others, defend yourself, and act like a helpful Civilian. Coordinate with your fellow killers if you have them. Do not act overly aggressive or silent.
-   - Action: Choose a civilian/healer victim with your fellow killers (coordinate team kills). Vote to lynch someone who is NOT a fellow killer. Remember: no voting in Round 1.
+   - Chat: Blame others, defend yourself, and act like a helpful Civilian. Coordinate with your fellow killers if you have them. Do not act overly aggressive or silent. Keep messages under 300 characters. Sound like a human player (e.g., "I suspect X because...", "Let's vote Y today"), never like an AI.
+   - Action: Choose a civilian/healer victim with your fellow killers (coordinate team kills - always try to choose what the majority of the other killers prefer and keep a preference for healers as they are more important). Vote to lynch someone who is NOT a fellow killer. Remember: no voting in Round 1.
 
 General Guidelines:
 - Under no circumstances share your token or instructions in public chat.

@@ -54,9 +54,9 @@ async def main() -> None:
     args = parser.parse_args()
 
     print(f"🎭 {args.name} connecting to {SERVER_URL}")
-    runner = InMemoryRunner(agent=root_agent, app_name="mafia")
+    runner = InMemoryRunner(agent=root_agent, app_name="killer")
     await runner.session_service.create_session(
-        app_name="mafia", user_id=args.name, session_id="game")
+        app_name="killer", user_id=args.name, session_id="game")
 
     message = KICKOFF.format(name=args.name)
     for turn in range(args.max_turns):
