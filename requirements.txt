@@ -30,3 +30,5 @@ python-dotenv==1.2.2
 
 # Notebooks (day 1)
 jupyterlab==4.6.2
+
+google-adk[eval]
