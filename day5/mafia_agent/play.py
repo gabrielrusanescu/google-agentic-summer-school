@@ -59,16 +59,31 @@ async def main() -> None:
         app_name="killer", user_id=args.name, session_id="game")
 
     message = KICKOFF.format(name=args.name)
+    errors_in_a_row = 0
     for turn in range(args.max_turns):
         final_text = ""
-        async for event in runner.run_async(
-            user_id=args.name,
-            session_id="game",
-            new_message=types.Content(role="user", parts=[types.Part(text=message)]),
-        ):
-            show(event)
-            if event.content and event.content.parts:
-                final_text = "".join(p.text or "" for p in event.content.parts)
+        try:
+            async for event in runner.run_async(
+                user_id=args.name,
+                session_id="game",
+                new_message=types.Content(
+                    role="user", parts=[types.Part(text=message)]),
+            ):
+                show(event)
+                if event.content and event.content.parts:
+                    final_text = "".join(p.text or "" for p in event.content.parts)
+        except Exception as exc:  # 429s, network blips — Day 1's lesson: retry
+            errors_in_a_row += 1
+            if errors_in_a_row > 5:
+                print(f"💀 giving up after 5 consecutive errors: {exc}")
+                return
+            wait = 15 * errors_in_a_row  # backoff: the game's phase timeouts
+            print(f"⚠️  {exc} — retrying in {wait}s "  # give us ~75s of slack
+                  f"({errors_in_a_row}/5)")
+            await asyncio.sleep(wait)
+            message = NUDGE
+            continue
+        errors_in_a_row = 0
         if "GAME OVER" in final_text.upper():
             print("🏁 done.")
             return
